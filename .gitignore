@@ -1,0 +1,7 @@
+.cfg
+**/*-language-serrver/
+.*~
+nvim/**/.*
+nvim/**/*~
+*~
+.lua~
