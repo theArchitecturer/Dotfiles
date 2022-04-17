@@ -5,3 +5,5 @@ nvim/**/.*
 nvim/**/*~
 *~
 .lua~
+clone.sh
+init_git.sh
