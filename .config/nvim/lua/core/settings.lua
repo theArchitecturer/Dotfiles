@@ -10,9 +10,12 @@ o.mouse = 'a' -- mouse support in all mode
 o.signcolumn = 'no' -- left sign column
 o.termguicolors = true -- 24 bit color support
 g.mapleader = ' '
+g.do_filetype_lua = 1
+vim.opt.completeopt = { "menu", "menuone", "noselect" }
+o.backupdir = "/home/thearchitecturer/.config/nvim/backup"
 cmd("autocmd BufWinEnter,WinEnter term://* startinsert") -- Start by enter enter insert mode
 -- For Window [[autocmd BufWritePost,FileWritePost * silent ! attrib +h <afile>~]]
-cmd [[autocmd BufWritePost,FileWritePost * silent ! mv <afile>~ .<afile>]]
+-- cmd [[autocmd BufWritePost,FileWritePost * silent ! mv <afile>~ .<afile>]]
 
 -- indentation
 o.autoindent = true
@@ -21,6 +24,7 @@ o.smartindent = true
 -- tab
 o.expandtab = true
 o.shiftwidth = 4 -- tab = 4 spaces
+o.tabstop=4
 
 -- wrap
 o.wrap = true -- enable wrap line
@@ -48,7 +52,7 @@ o.cmdheight = 2 -- number of line for command line
 -- update screen
 o.lazyredraw = true -- dont update screen during macro and script execution
 
--- on screen 
+-- on screen
 o.encoding = 'utf-8' -- encoding
 o.scrolloff = 3 -- number of line above and below cursor
 o.sidescrolloff = 5 -- same but with column

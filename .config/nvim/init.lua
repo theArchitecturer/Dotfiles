@@ -11,7 +11,4 @@ require('core.settings')
 -- require('paq_init')
 require('packer_init')
 require('plugins.general')
---require('statusline')
 
---local temp = require('os_detect').osDetect('uname')
---print(temp)

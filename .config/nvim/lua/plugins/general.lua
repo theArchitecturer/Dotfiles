@@ -1,10 +1,17 @@
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-  augroup end
-]])
-
-require('plugins.startup')
-require('plugins.bufferline')
-require('onedark').load()
+require'plugins.startup'
+require'plugins.startup'
+require'plugins.bufferline'
+-- require'plugins.coq'
+require'plugins.cmp'
+require'plugins.color'
+require'plugins.lsp_config'
+require'plugins.indent_blankline'
+require'plugins.custom'
+require'plugins.auto_pair'
+require'plugins.telescope'
+require'plugins.nvim-treesister'
+require'plugins.nvim_tree'
+require'plugins.terminal'
+require'plugins.comment'
+require'plugins.statusline'
+require'plugins.tabline'
