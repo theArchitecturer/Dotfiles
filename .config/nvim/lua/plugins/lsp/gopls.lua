@@ -15,19 +15,6 @@ M.setup_fn = function (opts)
         },
     }
 end
--- M.setup = general.setup
-
--- M.setup.cmd = {"gopls"}
--- M.setup.filetypes = {"go", "gomod"}
--- M.setup.root_dir = util.root_pattern("go.work", "go.mod", ".git")
--- M.setup.settings = {
-    --         gopls = {
-        --             analyses = {
-            --                 unusedparams = true,
-            --             },
-            --             staticcheck = true,
-            --     },
-            -- }
 
 local path = require 'nvim-lsp-installer.path'
 local install_root_dir = path.concat {vim.fn.stdpath 'data', 'lsp_servers'}
@@ -41,6 +28,6 @@ require('go').setup({
 
             -- require("go.format").goimport()  -- goimport + gofmt
             -- Run gofmt + goimport on save
-            vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').goimport() ]], false)
+vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').goimport() ]], false)
 
-            return M
+return M

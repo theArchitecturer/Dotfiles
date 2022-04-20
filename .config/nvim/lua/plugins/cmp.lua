@@ -47,6 +47,7 @@ cmp.setup({
         -- { name = 'ultisnips' }, -- For ultisnips users.
         -- { name = 'snippy' }, -- For snippy users.
         { name = 'nvim_lua'},
+        { name = 'nvim_lsp_signature_help' },
         { name = 'path'},
         { name = 'calc'}
     }, {

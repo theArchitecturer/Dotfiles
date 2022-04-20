@@ -16,6 +16,8 @@ util.map('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', map_opts)
 local servers = {
     'sumneko_lua',
     'gopls',
+    -- 'clangd',
+    'cmake',
 }
 
 for _, name in pairs(servers) do

@@ -1,17 +1,18 @@
 local util = require("utils.util")
+local keymap = vim.keymap
 
 local options = {
     noremap = true,
     silent = true
 }
-util.map("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", options)
-util.map("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", options)
-util.map("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>", options)
-util.map("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", options)
-util.map("n", "<leader>fc", "<cmd>lua require('telescope.builtin').commands()<cr>", options)
+keymap.set("n", "<leader>ff", function() return require('telescope.builtin').find_files() end, options)
+keymap.set("n", "<leader>fg", function() return require('telescope.builtin').live_grep() end, options)
+keymap.set("n", "<leader>fb", function() return require('telescope.builtin').buffers() end, options)
+keymap.set("n", "<leader>fh", function() return require('telescope.builtin').help_tags() end, options)
+keymap.set("n", "<leader>fc", function() return require('telescope.builtin').commands() end, options)
 
 -- default
-require'telescope'.setup {
+require 'telescope'.setup {
     defaults = {
         layout_strategy = 'horizontal',
         layout_config = {
@@ -22,10 +23,10 @@ require'telescope'.setup {
     },
     extensions = {
         fzf = {
-            fuzzy = true,                    -- false will only do exact matching
-            override_generic_sorter = true,  -- override the generic sorter
-            override_file_sorter = true,     -- override the file sorter
-            case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+            fuzzy = true, -- false will only do exact matching
+            override_generic_sorter = true, -- override the generic sorter
+            override_file_sorter = true, -- override the file sorter
+            case_mode = "smart_case", -- or "ignore_case" or "respect_case"
         }
     }
 }
